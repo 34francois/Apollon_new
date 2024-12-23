@@ -9,8 +9,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.sidebar.image("/home/francois/Documents/ACROPOLE/Dashboard/dash_1/Apollon_logo.png", width=380)
-st.image("/home/francois/Documents/ACROPOLE/Dashboard/dash_1/Daumier_bandeau.png", use_column_width=False, width=400)
+#st.sidebar.image("/home/francois/Documents/ACROPOLE/Dashboard/dash_1/Apollon_logo.png", width=380)
+#st.image("/home/francois/Documents/ACROPOLE/Dashboard/dash_1/Daumier_bandeau.png", use_column_width=False, width=400)
 
 # Initialisation dans st.session_state
 if "df" not in st.session_state:
