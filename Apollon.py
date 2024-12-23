@@ -1,14 +1,5 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-import streamlit.components.v1 as components
-import numpy as np
-import re
-import plotly.express as px
-import base64  
-import pdfkit
-from tempfile import NamedTemporaryFile
-import matplotlib.pyplot as plt
 
 # Configuration de la page
 st.set_page_config(
