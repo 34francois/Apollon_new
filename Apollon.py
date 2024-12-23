@@ -50,7 +50,11 @@ if "df" not in st.session_state:
         "TECHNOLOGIE": pd.Series(dtype='int'),
     })
 
-
+with st.sidebar.expander("charger fichier formaté"):
+    uploaded_file_format = st.file_uploader("Choisir un fichier CSV formaté", type=["csv"])
+    if uploaded_file is not None:
+        st.session_state.df = uploaded_file_format
+        
 # Chargement et formatage du CSV
 with st.sidebar.expander("Charger les données des élèves"):
     uploaded_file = st.file_uploader("Choisir un fichier CSV", type=["csv"])
