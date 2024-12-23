@@ -51,9 +51,11 @@ if "df" not in st.session_state:
     })
 
 with st.sidebar.expander("Charger les données"):
-    uploaded_file_format = st.file_uploader("Choisir un fichier CSV", type=["csv"])
+    uploaded_file = st.file_uploader("Choisir un fichier CSV", type=["csv"])
     if uploaded_file is not None:
-        st.session_state.df = pd.read_csv(uploaded_file_format)
+        new_df = pd.read_csv(uploaded_file)
+        st.session_state.df = pd.concat([st.session_state.df, new_df[st.session_state.df.columns]], ignore_index=True)
+        st.success("Données chargées et ajoutées au DataFrame!")
         
 # Chargement et formatage du CSV
 with st.sidebar.expander("Charger les données des élèves"):
