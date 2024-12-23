@@ -59,7 +59,7 @@ with st.sidebar.expander("Charger les données"):
         
 # Chargement et formatage du CSV
 with st.sidebar.expander("Charger les données des élèves"):
-    uploaded_file = st.file_uploader("Choisir un fichier CSV", type=["csv"])
+   uploaded_file = st.file_uploader("Choisir un fichier CSV2", type=["csv"])
     if uploaded_file is not None:
         if uploaded_file.getvalue():
             separator = st.text_input("Entrez le séparateur de données (par défaut : tabulation) :", value="\t")
