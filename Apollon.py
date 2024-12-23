@@ -139,7 +139,7 @@ with st.sidebar.expander("Charger des données supplémentaires"):
 
 
 
-with st.expander("Changer la classe d'un élève"):
+with st.expander("Changer classe d'un élève"):
     liste_eleves = st.session_state.df["ELEVE"].unique().tolist()
     nom_eleve = st.selectbox("Nom de l'élève :", liste_eleves, key="selectbox_eleve")
     classes_disponibles = st.session_state.df["Classe"].unique().tolist()  # Récupérer les classes uniques
