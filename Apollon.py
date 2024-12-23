@@ -52,7 +52,7 @@ if "df" not in st.session_state:
 
 with st.sidebar.expander("charger fichier formaté"):
     uploaded_file_format = st.file_uploader("Choisir un fichier CSV formaté", type=["csv"])
-    if uploaded_file is not None:
+    if uploaded_file_format is not None:
         st.session_state.df = uploaded_file_format
         
 # Chargement et formatage du CSV
